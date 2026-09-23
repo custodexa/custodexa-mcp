@@ -1,5 +1,7 @@
 # Contributing
 
+<p><b>English</b> | <a href="docs/zh-TW/CONTRIBUTING.md">繁體中文</a> | <a href="docs/ja/CONTRIBUTING.md">日本語</a></p>
+
 Thanks for contributing to `custodexa-mcp`. This repository holds only the stdio relay. Authorization, auditing, masking and the tools themselves belong to the Custodexa server, so changes to them go to the [main Custodexa repository](https://github.com/custodexa/custodexa).
 
 ## Before you start
@@ -38,4 +40,4 @@ The `Signed-off-by` line states that you wrote the change, or have the right to 
 - Every commit carries `Signed-off-by`.
 - Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`).
 - `go test ./...` passes.
-- No secrets in code, tests or examples; use placeholders such as `cxa_...`.
+- No secrets in code, tests or examples; use placeholders such as `<agent-token>`.

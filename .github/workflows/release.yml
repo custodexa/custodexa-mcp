@@ -17,6 +17,39 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      # The release body is the CHANGELOG.md section whose heading starts with
+      # "## <version>" (the tag without its leading "v"), up to the next "## "
+      # heading. A tag without a matching, non-empty section fails the release
+      # before anything is built. The notes file lives outside the checkout so
+      # the working tree stays clean for GoReleaser.
+      - name: Extract release notes from CHANGELOG.md
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME:?}"
+          version="${version#v}"
+          notes="${RUNNER_TEMP:?}/release-notes.md"
+          if ! awk -v ver="$version" '
+            /^## / {
+              if (found) exit
+              if (($2 "") == ver) { found = 1; next }
+            }
+            found {
+              if ($0 ~ /^[ \t\r]*$/) { if (started) blanks++; next }
+              for (; blanks > 0; blanks--) print ""
+              started = 1
+              print
+            }
+            END { if (!found) exit 1 }
+          ' CHANGELOG.md > "$notes"; then
+            echo "::error file=CHANGELOG.md::no section for version ${version}"
+            exit 1
+          fi
+          if ! grep -q '[^[:space:]]' "$notes"; then
+            echo "::error file=CHANGELOG.md::section for version ${version} is empty"
+            exit 1
+          fi
+          cat "$notes"
+
       # go.mod declares the oldest supported toolchain; release binaries are
       # built with the current patch release so the standard library carries
       # the latest fixes.
@@ -33,6 +66,6 @@ jobs:
         with:
           distribution: goreleaser
           version: v2.18.2
-          args: release --clean
+          args: release --clean --release-notes ${{ runner.temp }}/release-notes.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

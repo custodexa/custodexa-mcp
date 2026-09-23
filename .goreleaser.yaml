@@ -36,11 +36,20 @@ archives:
     # This naming is a stable interface: downstream packaging consumes these
     # archives by name, so keep it unchanged across releases.
     name_template: "custodexa-mcp_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    # Ship the documents the READMEs link to, in all three languages, so the
+    # language switcher and cross-links resolve inside the extracted archive.
+    # Paths keep their repository layout.
     files:
       - LICENSE
       - NOTICE
       - THIRD-PARTY-LICENSES.md
       - README.md
+      - CONTRIBUTING.md
+      - SECURITY.md
+      - CHANGELOG.md
+      - DCO.md
+      - docs/zh-TW/*.md
+      - docs/ja/*.md
 
 checksum:
   name_template: checksums.txt
@@ -51,8 +60,8 @@ release:
     owner: custodexa
     name: custodexa-mcp
 
-changelog:
-  sort: asc
-  filters:
-    exclude:
-      - "^Merge "
+# Release notes are the matching version section of CHANGELOG.md, passed in by
+# the release workflow with --release-notes. When that flag is set, GoReleaser
+# publishes the file as-is and does not build a commit list. Do not set
+# changelog.disable: it skips the changelog step entirely, which also drops the
+# --release-notes file and publishes an empty release body.

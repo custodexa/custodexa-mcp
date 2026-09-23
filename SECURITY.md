@@ -1,5 +1,9 @@
 # Reporting Security Issues
 
+**English** | [繁體中文](docs/zh-TW/SECURITY.md) | [日本語](docs/ja/SECURITY.md)
+
+> If the language versions ever diverge, this English text governs.
+
 ## Please do not open a public issue
 
 Use GitHub's private vulnerability reporting. Pick the repository by where the problem lives:
