@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+version: 2
+
+project_name: custodexa-mcp
+
+builds:
+  - id: custodexa-mcp
+    main: .
+    binary: custodexa-mcp
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    # Stamp files with the commit time so rebuilding a tag yields identical binaries.
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
+archives:
+  - id: custodexa-mcp
+    ids:
+      - custodexa-mcp
+    formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    # This naming is a stable interface: downstream packaging consumes these
+    # archives by name, so keep it unchanged across releases.
+    name_template: "custodexa-mcp_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - LICENSE
+      - NOTICE
+      - THIRD-PARTY-LICENSES.md
+      - README.md
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
+
+release:
+  github:
+    owner: custodexa
+    name: custodexa-mcp
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^Merge "

@@ -1,0 +1,19 @@
+custodexa-mcp
+Copyright 2026 The Custodexa Authors
+
+This product is licensed under the GNU Affero General Public License v3.0.
+See the LICENSE file for the full text.
+
+This product includes third-party software. A complete inventory of the
+third-party components compiled into this product, together with their
+licenses, is provided in THIRD-PARTY-LICENSES.md.
+
+Section 4(d) of the Apache License 2.0 requires the attribution notices from
+the NOTICE file of an Apache License 2.0 licensed component to be reproduced
+when that component is distributed as part of this product.
+
+Scope of this file: this product compiles in 1 Apache License 2.0 component,
+github.com/modelcontextprotocol/go-sdk (licensed under Apache-2.0 AND MIT).
+0 of these 1 components carry a NOTICE file upstream, so section 4(d) does not
+apply and this file reproduces no third-party notices. The component's full
+license text is included in THIRD-PARTY-LICENSES.md.
