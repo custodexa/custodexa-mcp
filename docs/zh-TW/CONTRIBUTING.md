@@ -24,7 +24,7 @@ go test ./...
 
 ## DCO 簽署（必要）
 
-本專案以 AGPL-3.0 授權，並依 Developer Certificate of Origin 接受貢獻。不需要簽任何協議，只要每個 commit 加一行：
+本專案以 AGPL-3.0-only 授權，並依 Developer Certificate of Origin 接受貢獻。不需要簽任何協議，只要每個 commit 加一行：
 
 ```bash
 git commit -s -m "fix: describe your change"

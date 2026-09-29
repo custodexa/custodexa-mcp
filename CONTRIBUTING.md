@@ -24,7 +24,7 @@ Tests must pass, and a behavior change needs a test that covers it.
 
 ## DCO sign-off (required)
 
-The project is licensed under AGPL-3.0 and accepts contributions under the Developer Certificate of Origin. There is no agreement to sign, just one line per commit:
+The project is licensed under AGPL-3.0-only and accepts contributions under the Developer Certificate of Origin. There is no agreement to sign, just one line per commit:
 
 ```bash
 git commit -s -m "fix: describe your change"

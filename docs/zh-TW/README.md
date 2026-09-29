@@ -321,6 +321,6 @@ agent 處理一項任務時，通常依下列順序進行：
 
 ## 授權
 
-`custodexa-mcp` 以 GNU Affero General Public License v3.0 授權，見 [LICENSE](../../LICENSE)、[NOTICE](../../NOTICE) 與 [THIRD-PARTY-LICENSES.md](../../THIRD-PARTY-LICENSES.md)。
+`custodexa-mcp` 以 GNU Affero General Public License v3.0 only（AGPL-3.0-only）授權，見 [LICENSE](../../LICENSE)、[NOTICE](../../NOTICE) 與 [THIRD-PARTY-LICENSES.md](../../THIRD-PARTY-LICENSES.md)。
 
 歡迎依 [DCO](../../DCO.md) 貢獻，詳見 [CONTRIBUTING.md](CONTRIBUTING.md)。回報漏洞的方式見 [SECURITY.md](SECURITY.md)。版本說明在 [CHANGELOG.md](../../CHANGELOG.md)。

@@ -1,6 +1,6 @@
 # Third-Party Licenses
 
-`custodexa-mcp` is licensed under the GNU Affero General Public License v3.0
+`custodexa-mcp` is licensed under the GNU Affero General Public License v3.0 only (AGPL-3.0-only)
 (see [LICENSE](LICENSE)). The binaries built from this repository also contain
 the third-party Go modules listed below and parts of the Go standard library.
 Each of these components remains under its own license. The attribution

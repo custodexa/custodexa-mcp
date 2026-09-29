@@ -321,6 +321,6 @@ chmod 600 ~/Library/Application\ Support/Claude/claude_desktop_config.json
 
 ## ライセンス
 
-`custodexa-mcp` は GNU Affero General Public License v3.0 のもとでライセンスされています。[LICENSE](../../LICENSE)、[NOTICE](../../NOTICE)、[THIRD-PARTY-LICENSES.md](../../THIRD-PARTY-LICENSES.md) を参照してください。
+`custodexa-mcp` は GNU Affero General Public License v3.0 only（AGPL-3.0-only）のもとでライセンスされています。[LICENSE](../../LICENSE)、[NOTICE](../../NOTICE)、[THIRD-PARTY-LICENSES.md](../../THIRD-PARTY-LICENSES.md) を参照してください。
 
 コントリビューションは [DCO](../../DCO.md) のもとで歓迎します。詳しくは [CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。脆弱性は [SECURITY.md](SECURITY.md) に記載の方法で報告してください。リリースノートは [CHANGELOG.md](../../CHANGELOG.md) にあります。

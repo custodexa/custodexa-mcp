@@ -321,6 +321,6 @@ These rules live on the Custodexa server and apply the same way whether an agent
 
 ## License
 
-`custodexa-mcp` is licensed under the GNU Affero General Public License v3.0; see [LICENSE](LICENSE), [NOTICE](NOTICE) and [THIRD-PARTY-LICENSES.md](THIRD-PARTY-LICENSES.md).
+`custodexa-mcp` is licensed under the GNU Affero General Public License v3.0 only (AGPL-3.0-only); see [LICENSE](LICENSE), [NOTICE](NOTICE) and [THIRD-PARTY-LICENSES.md](THIRD-PARTY-LICENSES.md).
 
 Contributions are welcome under the [DCO](DCO.md); see [CONTRIBUTING.md](CONTRIBUTING.md). Report vulnerabilities as described in [SECURITY.md](SECURITY.md). Release notes are in [CHANGELOG.md](CHANGELOG.md).

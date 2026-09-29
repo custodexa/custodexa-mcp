@@ -24,7 +24,7 @@ go test ./...
 
 ## DCO の署名（必須）
 
-本プロジェクトのライセンスは AGPL-3.0 で、コントリビューションは Developer Certificate of Origin のもとで受け入れます。署名する契約書はなく、コミットごとに 1 行を付けるだけです。
+本プロジェクトのライセンスは AGPL-3.0-only で、コントリビューションは Developer Certificate of Origin のもとで受け入れます。署名する契約書はなく、コミットごとに 1 行を付けるだけです。
 
 ```bash
 git commit -s -m "fix: describe your change"
